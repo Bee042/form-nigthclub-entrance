@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# DESCRIPTION DU PROGRAMME
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ce petit programme est un formulaire en 2 étapes qui doit déterminer si l'utilisateur est autorisé à rentrer dans l'établissement.
 
-## Available Scripts
+## A l'étape 1 :
+- il renseigne son nom :
+    qui doit avoir 2 caractères minimum, 20 maximum
+    et qui n'accepte pas les caractères spéciaux
+- il doit choisir un genre : masculin ou féminin 
+    (comme il s'agit d'un exercice, nous n'avons pas pris en compte l'intégralité des genres ou non genre)
+- le bouton suivant s'anime au survol
+    au clic, il dirige vers l'étape 2
 
-In the project directory, you can run:
+## A l'étape 2 :
+- il renseigne son âge
+    qui doit être supérieur à 18 ans
+- il indique s'il conduit ou non
+- le bouton précédent renvoie à l'étape 1
+- le bouton envoyer valide et affiche le résultat
 
-### `npm start`
+## Résultat :
+- si l'utilisateur a moins de 18 ans, le message suivant s'affiche :
+    Désolé "nom", tu es trop jeune pour entrer ici
+- si l'utilisateur est majeur ET 
+    - si c'est une femme, le message sera :
+        Bienvenue "nom"! L'entrée est gratuite pour les femmes
+    - si c'est un homme de 18 à 20 ans :
+        Bienvenue "nom" ! Le prix de l'entrée est de 10€
+    - si c'est un homme de plus de 20 ans :
+        Bienvenue "nom" ! Le prix de l'entrée est de 15€
+    - s'il/elle conduit, un deuxième message s'affiche :
+        Tu conduis : récupère ton soft gratuit au bar!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Gestion des erreurs a l'ETAPE 1 
+- si le nom est trop court, message au clic sur "suivant" : 
+    "Saisis au moins 2 caractères"
+- si le nom est trop long, message au clic sur "suivant" : 
+    "Ton nom ne peut pas faire plus de 20 caractères"
+- si le nom comporte des caractères spéciaux, message au clic sur "suivant" : 
+    "Le nom ne peut pas contenir de caractères spéciaux"
+- si aucun genre n'est sélectionné, message au clic sur "suivant" :
+    "Sélectionne un genre"
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Sources :
+[FORM](https://uiverse.io/gharsh11032000/bitter-cow-59)
+[SENDBTN](https://uiverse.io/Spacious74/horrible-horse-4)
+[NAVBTN](https://uiverse.io/benjimich/lovely-octopus-40)
+[RADIOBTN](https://uiverse.io/adeladel522/afraid-cat-83)
