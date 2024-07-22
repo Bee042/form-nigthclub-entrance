@@ -1,0 +1,48 @@
+/* Styling for the send button */
+.send-btn {
+  font-size: 1.4em;
+  padding: 0.6em 0.8em;
+  border-radius: 0.5em;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.71);
+  position: relative;
+  z-index: 10; /* Ensure the button is above other elements */
+}
+
+/* Container for the send button with gradient background and hover effects */
+.send-btn-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5);
+  border-radius: 0.9em;
+  transition: background 0.4s ease;
+}
+
+/* Pseudo-element for creating a blur effect on hover */
+.send-btn-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0.9em; 
+  background: transparent; 
+  z-index: 0; /* Positioned behind the button */
+  filter: blur(0); /* No blur initially */
+  transition: background 0.4s ease, filter 0.4s ease;
+}
+
+/* Hover effect with a blurred gradient background */
+.send-btn-container:hover::before {
+  background: linear-gradient(90deg, #03a9f4, #f441a5); /* Gradient background on hover */
+  filter: blur(1.2em);
+}
+
+/* Active state with reduced blur for a pressed effect */
+.send-btn-container:active::before {
+  filter: blur(0.2em); 
+}

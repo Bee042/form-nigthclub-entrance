@@ -1,0 +1,91 @@
+/* Wrapper for previous and next buttons */
+.prevBtn-wrapper, .btn-wrapper {
+  display: flex;
+}
+
+.prevBtn-wrapper {
+  justify-content: flex-start;
+  margin-left: 40px;
+}
+
+.btn-wrapper {
+  justify-content: flex-end;
+  margin-right: 40px;
+}
+
+/* Container for button and arrow */
+.prevBtn-container, .nextBtn-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+/* Common styles for previous and next buttons */
+.prev-btn, .next-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  padding: .5em 1.5em;
+  font-size: 20px;
+  font-weight: 600;
+  color: #7f5af0;
+  transition: all .3s ease;
+}
+
+/* Arrow styles */
+.prev-arrow, .arrow {
+  fill: #94a1b2;
+  position: absolute;
+  pointer-events: none;
+  width: 24px;
+  transition: all .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.prev-arrow {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg); /* Rotate for previous arrow */
+}
+
+.arrow {
+  right: 0;
+  top: 25%;
+}
+
+/* Hover effects for buttons */
+.prev-btn:hover, .next-btn:hover {
+  letter-spacing: 2px;
+}
+
+/* Hover effects for the secondary and tertiary elements */
+.prev-btn:hover ~ .second, .next-btn:hover ~ .second {
+  opacity: .66;
+  transition: opacity .3s ease 50ms; 
+}
+
+.prev-btn:hover ~ .second {
+  left: -20px;
+}
+
+.next-btn:hover ~ .second {
+  right: -20px;
+}
+
+.prev-btn:hover ~ .third, .next-btn:hover ~ .third {
+  opacity: .33;
+  transition: opacity .3s ease 100ms; 
+}
+
+.prev-btn:hover ~ .third {
+  left: -40px;
+}
+
+.next-btn:hover ~ .third {
+  right: -40px;
+}
+
+/* Initial styles for secondary and tertiary elements */
+.second, .third {
+  opacity: 0;
+}

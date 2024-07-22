@@ -1,0 +1,74 @@
+/* Container for the form with background gradient and padding */
+.form-container {
+  width: 600px;
+  background: linear-gradient(#212121, #212121) padding-box,
+    linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #94a1b2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+
+p {
+  color: #94a1b2;
+}
+
+.message-container {
+  padding: 10px;
+}
+
+/* Styling for error messages */
+.error-message {
+  color: #d431ff;
+}
+
+.welcome {
+  padding-bottom: 20px;
+}
+
+/* Styling for the welcome message */
+.welcome-message {
+  font-family: Arial, sans-serif;
+  font-size: calc(10px + 2vmin);
+}
+
+/* Styling for female names */
+.female-name {
+  color: #e123ff;
+}
+
+/* Styling for male names */
+.male-name {
+  color: #05d9e8;
+}
+
+/* Animated styling for free soft message */
+.free-soft {
+  color: #3fff2d;
+  animation: colorChange 3s infinite;
+}
+
+/* Styling for price messages */
+.price-message {
+  font-weight: 500;
+  color: yellow;
+}
+
+/* Keyframes for the color change animation */
+@keyframes colorChange {
+  0% {
+    color: #3fff2d;
+  }
+  50% {
+    color: #28a745; /* Slightly darker green */
+  }
+  100% {
+    color: #3fff2d;
+  }
+}
